@@ -1209,6 +1209,11 @@ func (in *PoolInitParameters) DeepCopyInto(out *PoolInitParameters) {
 		*out = new(string)
 		**out = **in
 	}
+	if in.PublicIPDisabled != nil {
+		in, out := &in.PublicIPDisabled, &out.PublicIPDisabled
+		*out = new(bool)
+		**out = **in
+	}
 	if in.Region != nil {
 		in, out := &in.Region, &out.Region
 		*out = new(string)
@@ -1387,6 +1392,11 @@ func (in *PoolObservation) DeepCopyInto(out *PoolObservation) {
 		*out = new(string)
 		**out = **in
 	}
+	if in.PublicIPDisabled != nil {
+		in, out := &in.PublicIPDisabled, &out.PublicIPDisabled
+		*out = new(bool)
+		**out = **in
+	}
 	if in.Region != nil {
 		in, out := &in.Region, &out.Region
 		*out = new(string)
@@ -1534,6 +1544,11 @@ func (in *PoolParameters) DeepCopyInto(out *PoolParameters) {
 	if in.PlacementGroupID != nil {
 		in, out := &in.PlacementGroupID, &out.PlacementGroupID
 		*out = new(string)
+		**out = **in
+	}
+	if in.PublicIPDisabled != nil {
+		in, out := &in.PublicIPDisabled, &out.PublicIPDisabled
+		*out = new(bool)
 		**out = **in
 	}
 	if in.Region != nil {

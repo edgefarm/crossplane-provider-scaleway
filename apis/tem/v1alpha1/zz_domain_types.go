@@ -60,6 +60,10 @@ type DomainObservation struct {
 	// Date and time the domain was last found to be valid (RFC 3339 format)
 	LastValidAt *string `json:"lastValidAt,omitempty" tf:"last_valid_at,omitempty"`
 
+	// The Scaleway's blackhole MX server to use if you do not have one.
+	// The Scaleway's blackhole MX server to use
+	MxBlackhole *string `json:"mxBlackhole,omitempty" tf:"mx_blackhole,omitempty"`
+
 	// The domain name, must not be used in another Transactional Email Domain.
 	// ~> Important: Updates to name will recreate the domain.
 	// The domain name used when sending emails
@@ -81,21 +85,27 @@ type DomainObservation struct {
 	// Date and time of the revocation of the domain (RFC 3339 format)
 	RevokedAt *string `json:"revokedAt,omitempty" tf:"revoked_at,omitempty"`
 
+	// The SMTP host to use to send emails.
 	// SMTP host to use to send emails
 	SMTPHost *string `json:"smtpHost,omitempty" tf:"smtp_host,omitempty"`
 
+	// The SMTP port to use to send emails over TLS.
 	// SMTP port to use to send emails over TLS. (Port 587)
 	SMTPPort *float64 `json:"smtpPort,omitempty" tf:"smtp_port,omitempty"`
 
+	// The SMTP port to use to send emails over TLS.
 	// SMTP port to use to send emails over TLS. (Port 2587)
 	SMTPPortAlternative *float64 `json:"smtpPortAlternative,omitempty" tf:"smtp_port_alternative,omitempty"`
 
+	// The SMTP port to use to send emails.
 	// SMTP port to use to send emails. (Port 25)
 	SMTPPortUnsecure *float64 `json:"smtpPortUnsecure,omitempty" tf:"smtp_port_unsecure,omitempty"`
 
+	// The SMTPS port to use to send emails over TLS Wrapper.
 	// SMTPS port to use to send emails over TLS Wrapper. (Port 465)
 	SmtpsPort *float64 `json:"smtpsPort,omitempty" tf:"smtps_port,omitempty"`
 
+	// The SMTPS port to use to send emails over TLS Wrapper.
 	// SMTPS port to use to send emails over TLS Wrapper. (Port 2465)
 	SmtpsPortAlternative *float64 `json:"smtpsPortAlternative,omitempty" tf:"smtps_port_alternative,omitempty"`
 

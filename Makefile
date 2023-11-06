@@ -4,11 +4,11 @@
 PROJECT_NAME := provider-scaleway
 PROJECT_REPO := github.com/scaleway/$(PROJECT_NAME)
 
-export TERRAFORM_VERSION := 1.3.3
+export TERRAFORM_VERSION := 1.6.3
 
 export TERRAFORM_PROVIDER_SOURCE := scaleway/scaleway
 export TERRAFORM_PROVIDER_REPO := https://github.com/scaleway/terraform-provider-scaleway
-export TERRAFORM_PROVIDER_VERSION := 2.28.0
+export TERRAFORM_PROVIDER_VERSION := 2.32.0
 export TERRAFORM_PROVIDER_DOWNLOAD_NAME := terraform-provider-scaleway
 export TERRAFORM_NATIVE_PROVIDER_BINARY := terraform-provider-scaleway_v2.28.0
 export TERRAFORM_DOCS_PATH := docs/resources
